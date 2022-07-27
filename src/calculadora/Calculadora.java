@@ -3,43 +3,26 @@ package calculadora;
 import java.util.Scanner;
 
 public class Calculadora {
-
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+        double num1, num2, soma, subtracao, multi, divi;
 
-        int a, b;
+        System.out.println("Insira o primeiro número: ");
+        num1 = in.nextInt();
 
-        System.out.println("Digite o primeiro valor:");
-        a = scan.nextInt();
-        System.out.println("Digite o segundo valor:");
-        b = scan.nextInt();
+        System.out.println("Insira o segundo número: ");
+        num2 = in.nextInt();
 
-        int somar = somar(a,b);
-        int subtrair = subtrair(a,b);
-        int multiplicar = multiplicar(a,b);
-        double dividir = dividir(a,b);
+        soma = num1 + num2;
+        System.out.println("O resultado da soma é:" + soma);
 
-        System.out.println("somar:" + somar);
-        System.out.println("subtração:" + subtrair);
-        System.out.println("mult:" + multiplicar);
-        System.out.println("div:" + dividir);
+        subtracao = num1 - num2;
+        System.out.println("O resultado da subtração é: " + subtracao);
 
+        multi = num1 * num2;
+        System.out.println("O resultado da multiplicação é: " + multi);
 
-
-
-
-    }
-
-    public static int somar (int a, int b) {
-        return a + b;
-    }
-    public static int subtrair (int a, int b) {
-        return a - b;
-    }
-    public static int multiplicar (int a, int b) {
-        return a * b;
-    }
-    public static int dividir (int a, int b) {
-        return a / b;
+        divi = num1 / num2;
+        System.out.println("O resultado da divisão é: " + divi);
     }
 }
